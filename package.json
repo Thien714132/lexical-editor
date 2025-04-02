@@ -1,9 +1,10 @@
 {
-  "name": "lexical-rich-text-example",
+  "name": "lexical-rich-text",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "Editor.d.ts",
   "dependencies": {
     "@lexical/react": "0.13.1",
     "lexical": "0.13.1",
@@ -11,11 +12,15 @@
     "react-dom": "18.1.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
     "@babel/runtime": "7.13.8"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "babel src -d dist",
+    "prepublishOnly": "npm run build"
   },
   "browserslist": [
     ">0.2%",
