@@ -1,1 +1,1 @@
-export { default as Editor } from "./Editor.js";
+export { default as Editor } from "./Editor.jsx";
